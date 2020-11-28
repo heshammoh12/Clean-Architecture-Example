@@ -6,8 +6,9 @@ import com.raya.mvvmcleanarchitectureexample.data.repository.artists.datasource.
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ArtistLocalDataSourceImpl(private val artistDao: ArtistDao):
+class ArtistLocalDataSourceImpl @Inject constructor(private val artistDao: ArtistDao):
     ArtistLocalDataSource {
     override suspend fun getArtistsFromDB(): List<Artist> {
        return artistDao.getArtists()

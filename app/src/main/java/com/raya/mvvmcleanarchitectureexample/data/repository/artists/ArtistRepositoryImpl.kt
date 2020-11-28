@@ -7,8 +7,9 @@ import com.raya.mvvmcleanarchitectureexample.data.repository.artists.datasource.
 import com.raya.mvvmcleanarchitectureexample.data.repository.artists.datasource.ArtistRemoteDatasource
 import com.raya.mvvmcleanarchitectureexample.domain.repository.ArtistRepository
 import java.lang.Exception
+import javax.inject.Inject
 
-class ArtistRepositoryImpl(
+class ArtistRepositoryImpl @Inject constructor(
     private val artistRemoteDatasource: ArtistRemoteDatasource,
     private val artistLocalDataSource: ArtistLocalDataSource,
     private val artistCacheDataSource: ArtistCacheDataSource

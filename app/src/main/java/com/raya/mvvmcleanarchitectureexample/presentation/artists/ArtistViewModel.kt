@@ -7,9 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.GetArtistsUseCase
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.UpdateArtistsUseCase
+import javax.inject.Singleton
 
-class ArtistViewModel /*@ViewModelInject constructor*/(
-    /*@Assisted */private val savedStateHandle: SavedStateHandle,
+
+class ArtistViewModel @ViewModelInject constructor(
+    @Assisted private val savedStateHandle: SavedStateHandle,
     private val getArtistsUseCase: GetArtistsUseCase,
     private val updateArtistsUseCase: UpdateArtistsUseCase
 ) : ViewModel() {
