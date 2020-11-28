@@ -25,12 +25,6 @@ object APIModule {
         .addInterceptor(interceptor)
         .build()
 
-    private fun retrofit(): Retrofit = Retrofit.Builder()
-        .client(okHttpClient)
-        .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
     @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {

@@ -7,15 +7,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.GetArtistsUseCase
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.UpdateArtistsUseCase
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 
 
 class ArtistViewModel @ViewModelInject constructor(
-    @Assisted private val savedStateHandle: SavedStateHandle,
     private val getArtistsUseCase: GetArtistsUseCase,
     private val updateArtistsUseCase: UpdateArtistsUseCase
 ) : ViewModel() {
 
+    init {
+        val x = 4
+    }
     fun getArtists() = liveData {
         val artists = getArtistsUseCase.execute()
         emit(artists)
@@ -25,4 +28,7 @@ class ArtistViewModel @ViewModelInject constructor(
         val updatedArtists = updateArtistsUseCase.execute()
         emit(updatedArtists)
     }
+/*   fun updateArtists(){
+
+   }*/
 }

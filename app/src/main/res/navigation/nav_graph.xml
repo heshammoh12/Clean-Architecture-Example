@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/artistsMenu"
-        android:name="com.raya.mvvmcleanarchitectureexample.ArtistsMenu"
+        android:name="com.raya.mvvmcleanarchitectureexample.presentation.artists.ArtistsMenu"
         android:label="fragment_artists_menu"
         tools:layout="@layout/fragment_artists_menu" />
 </navigation>

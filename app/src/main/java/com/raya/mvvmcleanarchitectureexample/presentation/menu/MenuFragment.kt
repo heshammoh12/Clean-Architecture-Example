@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.raya.mvvmcleanarchitectureexample.R
 import com.raya.mvvmcleanarchitectureexample.databinding.FragmentMenuBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +21,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [MenuFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding
 

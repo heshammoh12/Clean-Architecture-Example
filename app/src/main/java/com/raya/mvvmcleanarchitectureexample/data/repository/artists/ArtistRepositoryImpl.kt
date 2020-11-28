@@ -20,6 +20,8 @@ class ArtistRepositoryImpl @Inject constructor(
 
     override suspend fun updateArtists(): List<Artist>? {
         val newListOfArtist = getArtistsFromAPI()
+        Log.i("ArtistRepositoryImpl", "newListOfArtist[0].name")
+        Log.i("ArtistRepositoryImpl", newListOfArtist[0].name)
         artistLocalDataSource.clearAll()
         artistLocalDataSource.saveArtistsToDB(newListOfArtist)
         artistCacheDataSource.saveArtistsToCache(newListOfArtist)
