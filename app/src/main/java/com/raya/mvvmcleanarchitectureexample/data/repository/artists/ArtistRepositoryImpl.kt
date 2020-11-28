@@ -73,10 +73,4 @@ class ArtistRepositoryImpl(
         return artistList
     }
 
-
-
-
-
-
-
 }

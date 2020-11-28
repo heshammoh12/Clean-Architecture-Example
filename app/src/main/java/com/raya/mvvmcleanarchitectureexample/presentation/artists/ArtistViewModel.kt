@@ -1,4 +1,4 @@
-package com.raya.mvvmcleanarchitectureexample.presentation
+package com.raya.mvvmcleanarchitectureexample.presentation.artists
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -8,8 +8,8 @@ import androidx.lifecycle.liveData
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.GetArtistsUseCase
 import com.raya.mvvmcleanarchitectureexample.domain.usecase.UpdateArtistsUseCase
 
-class ArtistViewModel @ViewModelInject constructor(
-    @Assisted private val savedStateHandle: SavedStateHandle,
+class ArtistViewModel /*@ViewModelInject constructor*/(
+    /*@Assisted */private val savedStateHandle: SavedStateHandle,
     private val getArtistsUseCase: GetArtistsUseCase,
     private val updateArtistsUseCase: UpdateArtistsUseCase
 ) : ViewModel() {
