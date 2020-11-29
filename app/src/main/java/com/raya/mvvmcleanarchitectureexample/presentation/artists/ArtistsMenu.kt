@@ -23,7 +23,7 @@ class ArtistsMenu : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        viewModel.updateArtists()
+        viewModel.getArtistsTest()
         return inflater.inflate(R.layout.fragment_artists_menu, container, false)
     }
 
